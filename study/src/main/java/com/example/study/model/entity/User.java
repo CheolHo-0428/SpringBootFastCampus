@@ -20,9 +20,17 @@ public class User {
 
     private String account;
 
+    private String password;
+
+    private String status;
+
     private String email;
 
     private String phoneNumber;
+
+    private LocalDateTime registeredAt;
+
+    private LocalDateTime unregisteredAt;
 
     private LocalDateTime createdAt;
 
@@ -31,10 +39,5 @@ public class User {
     private LocalDateTime updatedAt;
 
     private String updatedBy;
-
-    // 1: N
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-    private List<OrderDetail> orderDetailsList;
-
 
 }
